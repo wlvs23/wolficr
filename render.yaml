@@ -1,0 +1,12 @@
+
+services:
+  - type: web
+    name: wolficr-backend
+    env: python
+    buildCommand: pip install -r server/requirements.txt
+    startCommand: python server/app.py
+    plan: free
+    branch: main
+    region: oregon
+    autoDeploy: true
+    rootDir: .
